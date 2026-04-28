@@ -27,7 +27,12 @@
           </span>
 
           <div class="mt-auto d-flex justify-content-end">
-            <a class="btn btn-view" [routerLink]="['/users', user.id]" aria-label="View user details">
+            <button
+              type="button"
+              class="btn btn-view"
+              aria-label="View user details"
+              (click)="openUserDetail(user)"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -44,10 +49,16 @@
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
               <span>View more</span>
-            </a>
+            </button>
           </div>
         </div>
       </article>
     </div>
   </div>
 </section>
+
+<app-user-detail
+  *ngIf="selectedUser"
+  [user]="selectedUser"
+  (close)="closeUserDetail()"
+></app-user-detail>

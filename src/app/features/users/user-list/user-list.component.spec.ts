@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { RouterTestingModule } from '@angular/router/testing';
 
 import { User } from '../models/user.model';
+import { UserDetailComponent } from '../user-detail/user-detail.component';
 import { UserService } from '../services/user.service';
 import { UserListComponent } from './user-list.component';
 
@@ -39,8 +39,7 @@ describe('UserListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [UserListComponent],
+      declarations: [UserListComponent, UserDetailComponent],
       providers: [{ provide: UserService, useValue: userServiceMock }]
     }).compileComponents();
 
@@ -67,5 +66,16 @@ describe('UserListComponent', () => {
 
     const adminRole = nativeElement.querySelector('.role-badge.role-admin');
     expect(adminRole).toBeTruthy();
+  });
+
+  it('should open popup when clicking view more button', () => {
+    const nativeElement = fixture.nativeElement as HTMLElement;
+    const button = nativeElement.querySelector('.btn-view') as HTMLButtonElement;
+
+    button.click();
+    fixture.detectChanges();
+
+    expect(component.selectedUser?.id).toBe(1);
+    expect(nativeElement.querySelector('app-user-detail')).toBeTruthy();
   });
 });

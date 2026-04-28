@@ -10,6 +10,7 @@ import { UserService } from '../services/user.service';
 })
 export class UserListComponent implements OnInit {
   users: User[] = [];
+  selectedUser: User | null = null;
   isLoading = true;
   hasError = false;
 
@@ -30,6 +31,14 @@ export class UserListComponent implements OnInit {
       default:
         return 'role-default';
     }
+  }
+
+  openUserDetail(user: User): void {
+    this.selectedUser = user;
+  }
+
+  closeUserDetail(): void {
+    this.selectedUser = null;
   }
 
   private loadUsers(): void {

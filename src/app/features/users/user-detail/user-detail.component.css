@@ -1,5 +1,58 @@
-.feature-card {
-  background: #ffffff;
-  border: 1px solid #f2d4ef;
+.detail-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(45, 10, 67, 0.45);
+  z-index: 1040;
+}
+
+.detail-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(560px, calc(100vw - 2rem));
+  background: linear-gradient(180deg, #ffffff, #fff6ff);
+  border: 1px solid #eecff7;
   border-radius: 1rem;
+  box-shadow: 0 20px 44px rgba(71, 24, 97, 0.25);
+  padding: 1.2rem;
+  z-index: 1050;
+}
+
+.detail-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #edd0f8;
+}
+
+.detail-close {
+  padding: 0.4rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.detail-grid dt {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+  color: #8d5aa4;
+}
+
+.detail-grid dd {
+  margin: 0.15rem 0 0;
+  color: #3b1b4d;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
 }
