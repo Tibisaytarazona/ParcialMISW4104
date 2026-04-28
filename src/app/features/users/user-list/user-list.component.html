@@ -1,13 +1,13 @@
 <section class="users-panel p-4 p-md-5">
   <header class="mb-4">
-    <h2 class="mb-1">Users</h2>
-    <p class="mb-0 panel-subtitle">Visual cards with roles and quick access.</p>
+    <h2 class="mb-1">Usuarios</h2>
+    <p class="mb-0 panel-subtitle">Tarjetas visuales con roles y acceso rapido.</p>
   </header>
 
-  <p *ngIf="isLoading" class="status-text mb-0">Loading users...</p>
+  <p *ngIf="isLoading" class="status-text mb-0">Cargando usuarios...</p>
 
   <p *ngIf="hasError" class="status-text text-danger mb-0">
-    We could not load users. Please try again.
+    No se pudieron cargar los usuarios. Intenta nuevamente.
   </p>
 
   <div *ngIf="!isLoading && !hasError" class="row g-4">
@@ -29,7 +29,7 @@
               </span>
 
               <div class="assigned-repositories mt-3">
-                <p class="assigned-title mb-2">Assigned repositories</p>
+                <p class="assigned-title mb-2">Repositorios asignados</p>
                 <div class="d-flex flex-wrap gap-2">
                   <a
                     *ngFor="let repoId of user.repoIds"
@@ -52,7 +52,7 @@
                       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
                       <circle cx="12" cy="12" r="3"></circle>
                     </svg>
-                    <span>Repo {{ repoId }}</span>
+                    <span>Repositorio {{ repoId }}</span>
                   </a>
                 </div>
               </div>

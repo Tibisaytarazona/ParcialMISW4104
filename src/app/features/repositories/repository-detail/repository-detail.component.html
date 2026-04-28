@@ -1,10 +1,10 @@
 <section class="repository-detail p-4 p-md-5">
-  <a class="btn btn-back mb-4" routerLink="/repositories">Back to repositories</a>
+  <a class="btn btn-back mb-4" routerLink="/repositories">Volver a repositorios</a>
 
-  <p *ngIf="isLoading" class="status-text mb-0">Loading repository details...</p>
+  <p *ngIf="isLoading" class="status-text mb-0">Cargando detalle del repositorio...</p>
 
   <p *ngIf="hasError" class="status-text text-danger mb-0">
-    We could not load this repository.
+    No se pudo cargar este repositorio.
   </p>
 
   <article *ngIf="!isLoading && !hasError && repository" class="card detail-card shadow-sm">
@@ -18,19 +18,19 @@
           <dd>{{ repository.id }}</dd>
         </div>
         <div>
-          <dt>Language</dt>
+          <dt>Lenguaje</dt>
           <dd>{{ repository.language }}</dd>
         </div>
         <div>
-          <dt>Stars</dt>
+          <dt>Estrellas</dt>
           <dd>{{ repository.stars }}</dd>
         </div>
         <div>
-          <dt>Created At</dt>
+          <dt>Creado en</dt>
           <dd>{{ repository.createdAt }}</dd>
         </div>
         <div>
-          <dt>Owner ID</dt>
+          <dt>ID del propietario</dt>
           <dd>{{ repository.ownerId }}</dd>
         </div>
       </dl>

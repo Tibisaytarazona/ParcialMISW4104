@@ -1,13 +1,13 @@
 <section class="repositories-panel p-4 p-md-5">
   <header class="mb-4">
-    <h2 class="mb-1">Repositories</h2>
-    <p class="mb-0 panel-subtitle">Name, stars and language overview.</p>
+    <h2 class="mb-1">Repositorios</h2>
+    <p class="mb-0 panel-subtitle">Resumen de nombre, estrellas y lenguaje.</p>
   </header>
 
-  <p *ngIf="isLoading" class="status-text mb-0">Loading repositories...</p>
+  <p *ngIf="isLoading" class="status-text mb-0">Cargando repositorios...</p>
 
   <p *ngIf="hasError" class="status-text text-danger mb-0">
-    We could not load repositories. Please try again.
+    No se pudieron cargar los repositorios. Intenta nuevamente.
   </p>
 
   <div *ngIf="!isLoading && !hasError" class="row g-4">
@@ -20,7 +20,7 @@
               <p class="mb-3 repository-description">{{ repository.description }}</p>
 
               <div class="d-flex flex-wrap gap-2">
-                <span class="meta-chip stars-chip">{{ repository.stars }} stars</span>
+                <span class="meta-chip stars-chip">{{ repository.stars }} estrellas</span>
                 <span class="meta-chip language-chip">{{ repository.language }}</span>
               </div>
             </div>
