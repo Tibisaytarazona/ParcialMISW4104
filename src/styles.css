@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+	--brand-pink-100: #fde7f7;
+	--brand-pink-300: #f4b8e8;
+	--brand-pink-500: #e66ad2;
+	--brand-purple-500: #8a3bbd;
+	--brand-purple-700: #5a1e82;
+	--brand-surface: #fff7fd;
+	--brand-text: #2f123f;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	color: var(--brand-text);
+	background:
+		radial-gradient(circle at 10% 10%, var(--brand-pink-300), transparent 40%),
+		radial-gradient(circle at 90% 0%, #d4b1f8, transparent 35%),
+		linear-gradient(180deg, var(--brand-pink-100), var(--brand-surface));
+}

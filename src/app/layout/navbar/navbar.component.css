@@ -1,0 +1,31 @@
+.app-navbar {
+  background: linear-gradient(120deg, var(--brand-purple-700), var(--brand-pink-500));
+  box-shadow: 0 8px 24px rgba(90, 30, 130, 0.25);
+}
+
+.brand-text {
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #fce9ff;
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
