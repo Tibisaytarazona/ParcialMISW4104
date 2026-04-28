@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 
 import { User } from '../models/user.model';
@@ -39,6 +40,7 @@ describe('UserListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [UserListComponent, UserDetailComponent],
       providers: [{ provide: UserService, useValue: userServiceMock }]
     }).compileComponents();
@@ -77,5 +79,14 @@ describe('UserListComponent', () => {
 
     expect(component.selectedUser?.id).toBe(1);
     expect(nativeElement.querySelector('app-user-detail')).toBeTruthy();
+  });
+
+  it('should render assigned repository links to repository detail', () => {
+    const nativeElement = fixture.nativeElement as HTMLElement;
+    const repoLink = nativeElement.querySelector('.repo-link') as HTMLAnchorElement;
+
+    expect(repoLink).toBeTruthy();
+    expect(repoLink.textContent).toContain('Repo 101');
+    expect(repoLink.getAttribute('ng-reflect-router-link')).toContain('/repositories,101');
   });
 });

@@ -75,6 +75,31 @@
   color: #5a4371;
 }
 
+.assigned-title {
+  color: #6f3096;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 999px;
+  border: 1px solid #e2c0f6;
+  padding: 0.18rem 0.55rem;
+  text-decoration: none;
+  color: #5a2ea3;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.repo-link:hover {
+  color: #fff;
+  border-color: #8a3bbd;
+  background: linear-gradient(120deg, #e66ad2, #8a3bbd);
+}
+
 .btn-view {
   display: inline-flex;
   align-items: center;
