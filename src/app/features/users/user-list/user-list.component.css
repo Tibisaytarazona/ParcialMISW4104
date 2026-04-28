@@ -1,5 +1,81 @@
-.feature-card {
-  background: #ffffff;
+.users-panel {
+  background: rgba(255, 255, 255, 0.88);
   border: 1px solid #f2d4ef;
   border-radius: 1rem;
+  backdrop-filter: blur(1px);
+}
+
+.panel-subtitle {
+  color: #6b2b84;
+}
+
+.status-text {
+  color: #5a1e82;
+}
+
+.user-card {
+  border: 1px solid #f3d8ff;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffffff, #fff8ff);
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f3d8ff;
+}
+
+.user-username {
+  color: #7a4b97;
+  font-size: 0.9rem;
+}
+
+.role-badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.role-admin {
+  background: #ffe3f4;
+  color: #a40f6b;
+}
+
+.role-editor {
+  background: #efe7ff;
+  color: #5a2ea3;
+}
+
+.role-viewer {
+  background: #e4f3ff;
+  color: #185f91;
+}
+
+.role-default {
+  background: #f3ebf8;
+  color: #5a4371;
+}
+
+.btn-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  border: 1px solid #e66ad2;
+  color: #7f2da8;
+  background: #fff;
+  font-weight: 600;
+}
+
+.btn-view:hover {
+  color: #fff;
+  border-color: #8a3bbd;
+  background: linear-gradient(120deg, #e66ad2, #8a3bbd);
 }
