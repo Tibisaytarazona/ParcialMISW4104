@@ -1,4 +1,54 @@
-<section class="feature-card p-4">
-  <h2 class="mb-1">Repositories List</h2>
-  <p class="mb-0 text-muted">Empty scaffold ready for TDD implementation.</p>
+<section class="repositories-panel p-4 p-md-5">
+  <header class="mb-4">
+    <h2 class="mb-1">Repositories</h2>
+    <p class="mb-0 panel-subtitle">Name, stars and language overview.</p>
+  </header>
+
+  <p *ngIf="isLoading" class="status-text mb-0">Loading repositories...</p>
+
+  <p *ngIf="hasError" class="status-text text-danger mb-0">
+    We could not load repositories. Please try again.
+  </p>
+
+  <div *ngIf="!isLoading && !hasError" class="row g-4">
+    <div class="col-12 col-md-6 col-xl-4" *ngFor="let repository of repositories">
+      <article class="card repository-card h-100 shadow-sm">
+        <div class="card-body">
+          <div class="repository-content">
+            <div class="repository-info">
+              <h5 class="mb-2 repository-name">{{ repository.name }}</h5>
+              <p class="mb-3 repository-description">{{ repository.description }}</p>
+
+              <div class="d-flex flex-wrap gap-2">
+                <span class="meta-chip stars-chip">{{ repository.stars }} stars</span>
+                <span class="meta-chip language-chip">{{ repository.language }}</span>
+              </div>
+            </div>
+
+            <a
+              class="btn btn-view"
+              [routerLink]="['/repositories', repository.id]"
+              aria-label="View repository details"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
 </section>

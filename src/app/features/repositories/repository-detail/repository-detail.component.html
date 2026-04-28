@@ -1,4 +1,39 @@
-<section class="feature-card p-4">
-  <h2 class="mb-1">Repository Detail</h2>
-  <p class="mb-0 text-muted">Empty scaffold ready for TDD implementation.</p>
+<section class="repository-detail p-4 p-md-5">
+  <a class="btn btn-back mb-4" routerLink="/repositories">Back to repositories</a>
+
+  <p *ngIf="isLoading" class="status-text mb-0">Loading repository details...</p>
+
+  <p *ngIf="hasError" class="status-text text-danger mb-0">
+    We could not load this repository.
+  </p>
+
+  <article *ngIf="!isLoading && !hasError && repository" class="card detail-card shadow-sm">
+    <div class="card-body">
+      <h2 class="mb-1">{{ repository.name }}</h2>
+      <p class="mb-4 detail-description">{{ repository.description }}</p>
+
+      <dl class="detail-grid mb-0">
+        <div>
+          <dt>ID</dt>
+          <dd>{{ repository.id }}</dd>
+        </div>
+        <div>
+          <dt>Language</dt>
+          <dd>{{ repository.language }}</dd>
+        </div>
+        <div>
+          <dt>Stars</dt>
+          <dd>{{ repository.stars }}</dd>
+        </div>
+        <div>
+          <dt>Created At</dt>
+          <dd>{{ repository.createdAt }}</dd>
+        </div>
+        <div>
+          <dt>Owner ID</dt>
+          <dd>{{ repository.ownerId }}</dd>
+        </div>
+      </dl>
+    </div>
+  </article>
 </section>

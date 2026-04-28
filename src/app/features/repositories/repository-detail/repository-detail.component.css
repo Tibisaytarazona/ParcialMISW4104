@@ -1,5 +1,58 @@
-.feature-card {
-  background: #ffffff;
+.repository-detail {
+  background: rgba(255, 255, 255, 0.88);
   border: 1px solid #e3c8f9;
   border-radius: 1rem;
+}
+
+.status-text {
+  color: #5a1e82;
+}
+
+.btn-back {
+  border-radius: 999px;
+  border: 1px solid #e2c0f6;
+  color: #5a2ea3;
+  background: #fff;
+}
+
+.btn-back:hover {
+  color: #fff;
+  background: linear-gradient(120deg, #e66ad2, #8a3bbd);
+  border-color: #8a3bbd;
+}
+
+.detail-card {
+  border: 1px solid #e7cff7;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffffff, #fbf4ff);
+}
+
+.detail-description {
+  color: #6f3096;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.detail-grid dt {
+  margin: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+  color: #8d5aa4;
+}
+
+.detail-grid dd {
+  margin: 0.2rem 0 0;
+  color: #3b1b4d;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
 }

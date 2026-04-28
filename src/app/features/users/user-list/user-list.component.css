@@ -19,6 +19,18 @@
   background: linear-gradient(180deg, #ffffff, #fff8ff);
 }
 
+.user-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.9rem;
+}
+
+.user-info {
+  min-width: 0;
+  flex: 1;
+}
+
 .avatar {
   width: 56px;
   height: 56px;
@@ -66,12 +78,14 @@
 .btn-view {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  flex-shrink: 0;
   border-radius: 999px;
   border: 1px solid #e66ad2;
   color: #7f2da8;
   background: #fff;
-  font-weight: 600;
 }
 
 .btn-view:hover {

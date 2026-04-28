@@ -1,5 +1,85 @@
-.feature-card {
-  background: #ffffff;
+.repositories-panel {
+  background: rgba(255, 255, 255, 0.88);
   border: 1px solid #e3c8f9;
   border-radius: 1rem;
+}
+
+.panel-subtitle {
+  color: #6f3096;
+}
+
+.status-text {
+  color: #5a1e82;
+}
+
+.repository-card {
+  border: 1px solid #e7cff7;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffffff, #fbf4ff);
+}
+
+.repository-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.9rem;
+}
+
+.repository-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.repository-name {
+  color: #471861;
+  word-break: break-word;
+}
+
+.repository-description {
+  color: #7b4e97;
+  font-size: 0.92rem;
+}
+
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.stars-chip {
+  background: #ffe3f4;
+  color: #a10f69;
+}
+
+.language-chip {
+  background: #efe7ff;
+  color: #5b2ea3;
+}
+
+.btn-view {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: 1px solid #e66ad2;
+  color: #7f2da8;
+  background: #fff;
+}
+
+.btn-view:hover {
+  color: #fff;
+  border-color: #8a3bbd;
+  background: linear-gradient(120deg, #e66ad2, #8a3bbd);
+}
+
+@media (max-width: 576px) {
+  .repository-content {
+    align-items: center;
+  }
 }
